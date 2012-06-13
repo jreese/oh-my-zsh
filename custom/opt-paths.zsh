@@ -1,6 +1,6 @@
 # Automatically add subdirectories from ~/opt to the user's path.
 
-if [ -d '~/opt' ]
+if [ -d ~/opt ]
 then
 	for optdir in `ls ~/opt/`
 	do
