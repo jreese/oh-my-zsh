@@ -6,7 +6,7 @@ setopt autocd
 unsetopt autopushd
 unsetopt beep
 setopt correct
-setopt correctall
+unsetopt correctall
 setopt dvorak
 setopt hist_ignore_all_dups
 setopt hist_ignore_dups
