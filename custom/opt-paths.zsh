@@ -10,9 +10,9 @@ then
 			optdirsubpath=$optdirpath/bin
 			if [ -d "$optdirsubpath" ]
 			then
-				export PATH=$PATH:$optdirsubpath
+				export PATH=$optdirsubpath:$PATH
 			else
-				export PATH=$PATH:$optdirpath
+				export PATH=$optdirpath:$PATH
 			fi
 		fi
 	done
