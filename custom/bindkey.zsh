@@ -12,3 +12,4 @@ bindkey 'a' accept-and-hold
 bindkey 'g' get-line
 bindkey 'h' run-help
 bindkey 'q' push-line
+bindkey 's' sudo-command-line
