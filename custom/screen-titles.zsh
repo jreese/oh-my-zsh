@@ -1,11 +1,13 @@
 
 # format titles for screen and rxvt
 function screen_title() {
-  # escape '%' chars in $1, make nonprintables visible
-  a=${(V)1//\%/\%\%}
+  if [ -n "$TMUX" ]; then
+    # escape '%' chars in $1, make nonprintables visible
+    a=${(V)1//\%/\%\%}
 
-  a=$(print -Pn "%20>...>$a" | tr -d "\n")
-  print -Pn "\ek$a:$3\e\\"      # screen title (in ^A")
+    a=$(print -Pn "%20>...>$a" | tr -d "\n")
+    print -Pn "\ek$a:$3\e\\"      # screen title (in ^A")
+  fi
 }
 
 # precmd is called just before the prompt is printed
